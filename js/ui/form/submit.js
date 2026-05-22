@@ -41,9 +41,9 @@ const onFormSubmit = async (evt) => {
   }
 };
 
-const initSubmit = ({ success, error }) => {
-  onSuccess = success;
-  onError = error;
+const initSubmit = ({ handleSuccess, handleError }) => {
+  onSuccess = handleSuccess;
+  onError = handleError;
 
   form.addEventListener('submit', onFormSubmit);
 };

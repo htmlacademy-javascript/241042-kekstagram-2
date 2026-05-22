@@ -35,11 +35,19 @@ const hideModal = () => {
   }
 };
 
+const onFileFieldChange = () => {
+  showModal();
+};
+
+const onCancelButtonClick = () => {
+  hideModal();
+};
+
 const initModal = (cb) => {
   onCloseCallback = cb;
 
-  fileField.addEventListener('change', showModal);
-  cancelButton.addEventListener('click', hideModal);
+  fileField.addEventListener('change', onFileFieldChange);
+  cancelButton.addEventListener('click', onCancelButtonClick);
 };
 
 const isTextFieldFocused = () =>

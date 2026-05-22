@@ -15,11 +15,11 @@ const initForm = () => {
   initScale();
   initEffects();
   initSubmit({
-    success: () => {
+    handleSuccess: () => {
       hideModal();
       showSuccessMessage();
     },
-    error: () => {
+    handleError: () => {
       showErrorMessage();
     },
   });
