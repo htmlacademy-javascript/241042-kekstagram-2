@@ -57,7 +57,11 @@ const showMessage = (template, buttonSelector) => {
     }
   }
 
-  closeButton.addEventListener('click', removeMessage);
+  const onCloseButtonClick = () => {
+    removeMessage();
+  };
+
+  closeButton.addEventListener('click', onCloseButtonClick);
   document.addEventListener('keydown', onKeydown);
   document.addEventListener('click', onOutsideClick);
 };

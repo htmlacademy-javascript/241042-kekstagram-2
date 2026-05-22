@@ -60,13 +60,17 @@ const resetComments = (newComments = []) => {
   commentsLoader.classList.remove('hidden');
 };
 
+const onCommentsLoaderClick = () => {
+  renderComments();
+};
+
 const initCommentsLoader = () => {
   if (isLoaderInitialized) {
     return;
   }
   isLoaderInitialized = true;
 
-  commentsLoader.addEventListener('click', renderComments);
+  commentsLoader.addEventListener('click', onCommentsLoaderClick);
 };
 
 export {

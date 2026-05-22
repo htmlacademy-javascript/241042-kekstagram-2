@@ -6,15 +6,15 @@ const Filter = {
   DISCUSSED: 'filter-discussed',
 };
 
-const shuffle = (array) => {
-  const result = [...array];
+const shuffle = (items) => {
+  const shuffledItems = [...items];
 
-  for (let i = result.length - 1; i > 0; i--) {
+  for (let i = shuffledItems.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [result[i], result[j]] = [result[j], result[i]];
+    [shuffledItems[i], shuffledItems[j]] = [shuffledItems[j], shuffledItems[i]];
   }
 
-  return result;
+  return shuffledItems;
 };
 
 const filterPictures = (pictures, filterType) => {
